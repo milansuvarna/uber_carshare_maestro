@@ -1,0 +1,6 @@
+appId: au.com.carnextdoor.staging.app
+---
+- tapOn:
+    point: "50%,45%"
+- inputText: 123
+- tapOn: Verify and login

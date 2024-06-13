@@ -1,0 +1,17 @@
+appId: au.com.carnextdoor.staging.app
+---
+- clearState
+- launchApp: au.com.carnextdoor.staging.app
+- assertVisible: "Log in to Uber Carshare"
+- tapOn:
+    point: "50%,43%"
+- inputText: 23072
+- tapOn:
+    point: "50%,31%"
+- inputText: 23072
+- tapOn: Log in
+- runFlow:
+    when:
+      visible: Some Text
+    file: subflows/mobile_verification.yaml
+- assertNotVisible: "Log in to Uber Carshare"
