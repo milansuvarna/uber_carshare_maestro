@@ -4,11 +4,11 @@ appId: au.com.carnextdoor.staging.app
 - launchApp: au.com.carnextdoor.staging.app
 - assertVisible: "Log in to Uber Carshare"
 - tapOn:
-    point: "50%,43%"
-- inputText: 23072
+    point: "50%,43%" # Currently cannot select by text so using point
+- inputText: 23072 # You may need to replace this with your user id of choice (and password below)
 - tapOn:
     point: "50%,31%"
-- inputText: 23072
+- inputText: 23072 # Password resets on staging every night so you may need to reset the staging password for this to work
 - tapOn: Log in
 - runFlow:
     when:

@@ -2,7 +2,7 @@
 
 Follow the [instalation instructions](https://maestro.mobile.dev/getting-started/installing-maestro)
 
-To run on ios simulator, install Facebook IDB tool following these [instructions](https://maestro.mobile.dev/getting-started/installing-maestro#connecting-to-your-device).
+To run on ios simulator, install Facebook IDB tool using these [instructions](https://maestro.mobile.dev/getting-started/installing-maestro#connecting-to-your-device).
 
 To run on Android emulator, no further installation required.
 
