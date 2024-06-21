@@ -6,7 +6,7 @@ To run on ios simulator, install Facebook IDB tool using these [instructions](ht
 
 To run on Android emulator, no further installation required.
 
-# Usage
+# Usage - local
 
 Prerequisites:
 - Maestro installation (see above)
@@ -24,4 +24,27 @@ To spin up [Maestro Studio](https://maestro.mobile.dev/getting-started/maestro-s
 
 ```
 maestro studio
+```
+
+# Usage - cloud-based
+
+Prerequisites:
+- Accept invite to Maestro Cloud (ask Kath)
+- [Install Maestro CLI](https://cloud.mobile.dev/getting-started/quickstart#id-1.-install-the-maestro-cli)
+- [Login to the CLI](https://cloud.mobile.dev/getting-started/quickstart#id-2.-login-to-the-cli)
+
+To run in Maestro cloud with a new apk:
+
+```
+maestro cloud <LOCAL_PATH_TO_APK> flows
+# For example:
+# maestro cloud test.apk flows
+```
+
+To run in Maestro cloud with a previously-used apk:
+
+```
+maestro cloud --app-binary-id=<APK_BINARY_ID> flows
+# For example:
+# maestro cloud --app-binary-id=cc50ba5c4da51b76c46d3b54e0b92240833e78fd flows
 ```
