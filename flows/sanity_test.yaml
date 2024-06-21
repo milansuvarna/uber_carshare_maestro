@@ -1,9 +1,10 @@
 appId: au.com.carnextdoor.staging.app
+name: Sanity test
 
 env:
   USERNAME: 23072  # You may need to replace this with your user id of choice (and password below)
   PASSWORD: 23072  # Password resets on staging every night so you may need to reset the staging password for this to work
-  ADDRESS: "55 Pyrmont Bridge Rd, Pyrmont NSW 2009, AU"
+  ADDRESS: "55 Pyrmont Bridge Rd, Pyrmont NSW 2009, Australia"
 
 ---
 - clearState
@@ -23,9 +24,8 @@ env:
 - tapOn: "City, hotel or address"
 - inputText: ${ADDRESS}
 - pressKey: Enter
-- tapOn: "${ADDRESS}
-${ADDRESS}"
-# Now select date and times... 
+- tapOn: "${ADDRESS}.*${ADDRESS}"
+# Now select date and times...
 - tapOn: "Confirm dates"
 - tapOn: "Confirm time"
 - assertVisible: "How are prices calculated?"
