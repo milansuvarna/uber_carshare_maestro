@@ -3,13 +3,17 @@ name: Login
 tags:
   - sanity
 env:
-  USERNAME: 23072  # You may need to replace this with your user id of choice (and password below)
-  PASSWORD: 23072  # Password resets on staging every night so you may need to reset the staging password for this to work
+  PASSWORD: 12345678
+onFlowStart:
+  - runScript: ../../javascripts/test-setup-api.js
+  - evalScript: ${console.log(output.testUser)}
+  - runScript: ../../javascripts/test-user-create.js
+
 ---
 - launchApp: au.com.carnextdoor.staging.app
 - assertVisible: "Log in to Uber Carshare"
 - tapOn: "Email address"
-- inputText: ${USERNAME}
+- inputText: ${output.testUser.email}
 - tapOn: "Password"
 - inputText: ${PASSWORD}
 - tapOn: Log in
