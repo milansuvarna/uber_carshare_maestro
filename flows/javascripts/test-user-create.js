@@ -1,8 +1,7 @@
 function createTestUser() {
   var createUserResponse = output.create("members", "cypress_borrower");
   var responseBody = json(createUserResponse.body)
-  console.log("Test member created");
-  console.log(responseBody);
+  console.log(`Test member created: ${responseBody.email}`);
   return responseBody;
 };
 
