@@ -3,7 +3,7 @@ name: Login
 tags:
   - sanity
 env:
-  PASSWORD: 12345678
+  PASSWORD: 12345678 # All members created using the api/v2/test_setup endpoints have this password.
 onFlowStart:
   - runScript: ../javascripts/test-setup-api.js
   - runScript: ../javascripts/test-user-create.js
