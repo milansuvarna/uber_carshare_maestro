@@ -13,10 +13,17 @@ Prerequisites:
 - Running ios simulator or Android emulator
 - Turbo-flutter app loaded onto simulator/emulator. For example, drag and drop an apk onto the emulator. Ensure it's flavor corresponds to staging since that is specified in the appId.
 
-To run tests:
+To run all tests:
 
 ```
-maestro test flows/sanity_test.yaml
+maestro test flows
+```
+
+To run a specific test:
+
+```
+maestro test <path-to-test>
+# eg maestro test flows/search_and_book.yaml
 ```
 
 

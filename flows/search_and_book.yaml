@@ -1,0 +1,21 @@
+appId: au.com.carnextdoor.staging.app
+name: Search and book
+tags:
+  - sanity
+env:
+  ADDRESS_SEARCH_TEXT: "55 Pyrmont Bridge Rd"
+  ADDRESS_CONFIRM_TEXT: "55 Pyrmont Bridge Rd, Pyrmont NSW 2009, Australia"
+onFlowComplete:
+- runScript: ./javascripts/test-user-delete.js
+
+---
+- clearState
+- runFlow: subflows/login.yaml
+- tapOn: "City, hotel or address"
+- inputText: ${ADDRESS_SEARCH_TEXT}
+- pressKey: Enter
+- tapOn: "${ADDRESS_CONFIRM_TEXT}.*${ADDRESS_CONFIRM_TEXT}"
+# Now select date and times...
+- tapOn: "Confirm dates"
+- tapOn: "Confirm time"
+- assertVisible: "How are prices calculated?"
