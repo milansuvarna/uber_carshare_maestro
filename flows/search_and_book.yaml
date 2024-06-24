@@ -3,15 +3,15 @@ name: Search and book
 tags:
   - sanity
 env:
-  ADDRESS: "55 Pyrmont Bridge Rd, Pyrmont NSW 2009, Australia"
-
+  ADDRESS_SEARCH_TEXT: "55 Pyrmont Bridge Rd"
+  ADDRESS_CONFIRM_TEXT: "55 Pyrmont Bridge Rd, Pyrmont NSW 2009, Australia"
 ---
 - clearState
 - runFlow: subflows/login.yaml
 - tapOn: "City, hotel or address"
-- inputText: ${ADDRESS}
+- inputText: ${ADDRESS_SEARCH_TEXT}
 - pressKey: Enter
-- tapOn: "${ADDRESS}.*${ADDRESS}"
+- tapOn: "${ADDRESS_CONFIRM_TEXT}.*${ADDRESS_CONFIRM_TEXT}"
 # Now select date and times...
 - tapOn: "Confirm dates"
 - tapOn: "Confirm time"
