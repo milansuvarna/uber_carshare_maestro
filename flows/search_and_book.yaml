@@ -6,7 +6,7 @@ env:
   ADDRESS_SEARCH_TEXT: "55 Pyrmont Bridge Rd"
   ADDRESS_CONFIRM_TEXT: "55 Pyrmont Bridge Rd, Pyrmont NSW 2009, Australia"
 onFlowComplete:
-- runScript: ../javascripts/test-user-delete.js
+- runScript: ./javascripts/test-user-delete.js
 
 ---
 - clearState

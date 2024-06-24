@@ -5,9 +5,9 @@ tags:
 env:
   PASSWORD: 12345678
 onFlowStart:
-  - runScript: ../../javascripts/test-setup-api.js
+  - runScript: ../javascripts/test-setup-api.js
   - evalScript: ${console.log(output.testUser)}
-  - runScript: ../../javascripts/test-user-create.js
+  - runScript: ../javascripts/test-user-create.js
 
 ---
 - launchApp: au.com.carnextdoor.staging.app
