@@ -9,7 +9,6 @@ onFlowStart:
 - runScript: ../javascripts/test-user-create.js
 
 ---
-- launchApp: au.com.carnextdoor.staging.app
 - assertVisible: "Log in to Uber Carshare"
 - tapOn: "Email address"
 - inputText: ${output.testUser.email}

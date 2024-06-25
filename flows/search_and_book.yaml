@@ -12,6 +12,7 @@ onFlowComplete:
 - runScript: ./javascripts/test-user-delete.js
 ---
 - clearState
+- launchApp: au.com.carnextdoor.staging.app
 - runFlow: subflows/login.yaml
 - tapOn: City, hotel or address
 - inputText: ${ADDRESS_SEARCH_TEXT}
