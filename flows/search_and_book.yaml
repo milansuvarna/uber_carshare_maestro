@@ -3,8 +3,8 @@ name: Search and book
 tags:
   - sanity
 env:
-  ADDRESS_SEARCH_TEXT: 55 Pyrmont Bridge Rd
-  ADDRESS_CONFIRM_TEXT: 55 Pyrmont Bridge Rd, Pyrmont NSW 2009, Australia
+  ADDRESS_SEARCH_TEXT: 580 george st
+  ADDRESS_CONFIRM_TEXT: 580 George St, Sydney NSW 2000, Australia
   # Provide env-configurability for test record setup
   TEST_SETUP_API_BASE_URL: ${TEST_SETUP_API_BASE_URL} # If not provided this gets set as a string: "null"
   TEST_SETUP_API_BASE_URL_DEFAULT: https://staging.ubercarshare.com
