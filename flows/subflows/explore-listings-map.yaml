@@ -1,0 +1,19 @@
+appId: au.com.carnextdoor.staging.app
+---
+- tapOn: Map
+- assertVisible: "How are prices calculated?"
+- waitForAnimationToEnd
+- tapOn:
+    label: Tap on cluster of listings
+    text: \d+ # TODO: Locator for cluster of listings on map. Currently relying on it being a number eg "3"
+# TODO: Assert list details visible
+# TODO: Locator to tap into a single listing marker on map. Then assert it is a car profile page.
+- tapOn:
+    point: "50%,35%"
+    label: Tap on map area (to close sublist)
+- tapOn:
+    point: "5%,6%" # TODO: Locator for back arrow
+    label: Tap on Back
+- tapOn:
+    point: "50%,35%"
+    label: Tap on map area (to close sublist)

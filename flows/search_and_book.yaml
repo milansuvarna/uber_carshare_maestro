@@ -20,3 +20,4 @@ onFlowComplete:
 - tapOn: "${ADDRESS_CONFIRM_TEXT}.*${ADDRESS_CONFIRM_TEXT}"
 - runFlow: "subflows/select-dates.yaml"
 - runFlow: "subflows/explore-listings-list.yaml"
+- runFlow: "subflows/explore-listings-map.yaml"
