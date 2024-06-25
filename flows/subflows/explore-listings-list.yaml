@@ -1,0 +1,36 @@
+appId: au.com.carnextdoor.staging.app
+---
+- tapOn: List
+- assertVisible: How are prices calculated?
+- waitForAnimationToEnd
+# TODO: Separate flow to test all visible elements of the listing items.
+# Since this will be much easier to test starting from a specific car test record to make assertions against.
+- tapOn:
+    below: How are prices calculated? # TODO: Locator for list item
+    label: Tap on first listing
+- assertVisible:
+    label: Assert this is the car profile screen
+    text: Go to checkout
+- tapOn:
+    point: "5%,6%" # TODO: Locator for back arrow to get back to the list
+    label: Tap on Back
+- scroll
+- scroll
+- runFlow:
+    label: Scroll to avoid clicking on damage banner
+    when:
+      visible: Damage and loss cover is included.+
+    commands:
+        - scroll
+- runFlow:
+    label: Scroll to avoid clicking on refueling banner
+    when:
+      visible: Get reimbursed if you refuel.+
+    commands:
+        - scroll
+- tapOn:
+    label: Tap on last visible listing
+    above: Map # TODO: Locator for listing item
+- assertVisible:
+    label: Assert this is the car profile screen
+    text: Go to checkout
