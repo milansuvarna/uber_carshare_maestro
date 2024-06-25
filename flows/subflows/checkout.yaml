@@ -1,0 +1,50 @@
+appId: au.com.carnextdoor.staging.app
+---
+- runScript: # This is required when running the subflow in isolation
+    label: Determine car search dates
+    when:
+      true: ${typeof output.startDayMonth == 'undefined'}
+    file: ../javascripts/get-search-datetimes.js
+- tapOn: Go to checkout
+- tapOn:
+    text: true # TODO: Locator for basic cover
+    label: Tap on Basic cover
+# TODO: Test for selecting premium cover
+- tapOn:
+    point: "50%,91%" # TODO: Locator for "confirm"
+    label: Tap on Confirm
+- assertVisible: Trip summary
+- assertVisible: .+${output.startDayMonth} 06:00AM to .+${output.endDayMonth} 11:00PM
+- assertVisible: 1 day, 17 hours.+
+- assertVisible: Booking fee.+
+# TODO: tap and assert tooltip. Need locator for tooltip!
+- assertVisible: Basic Cover.+
+# TODO: tap and assert tooltip
+- assertVisible: Upfront trip costs.+
+- assertVisible: First trip deposit.+
+# TODO: tap and assert tooltip
+- scrollUntilVisible:
+    element: Due today.+
+    direction: DOWN
+- scrollUntilVisible:
+    element: You will be charged this amount today.+
+    direction: DOWN
+- scrollUntilVisible:
+    element: Due after your trip.+
+    direction: DOWN
+# TODO: tap and assert tooltip
+- scrollUntilVisible:
+    element: Book now
+    direction: DOWN
+- assertVisible: You\'ll be charged distance costs.+
+- tapOn: applicable fees
+- assertVisible: "Inconvenience and administrative fees | Australia"
+- tapOn:
+    point: 7%,9% # TODO: Locator for back button
+    label: Tap on Back
+# TODO: change credit card
+# TODO: add promo code
+- assertVisible: Payment method
+- tapOn: Book now
+- assertVisible: Review the local Membership Agreement.+
+- tapOn: "I understand and agree"
