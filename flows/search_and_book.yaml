@@ -18,7 +18,4 @@ onFlowComplete:
 - inputText: ${ADDRESS_SEARCH_TEXT}
 - pressKey: Enter
 - tapOn: "${ADDRESS_CONFIRM_TEXT}.*${ADDRESS_CONFIRM_TEXT}"
-# Now select date and times...
-- tapOn: Confirm dates
-- tapOn: Confirm time
-- assertVisible: How are prices calculated?
+- runFlow: "subflows/select-dates.yaml"

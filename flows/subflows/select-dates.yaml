@@ -1,0 +1,17 @@
+appId: au.com.carnextdoor.staging.app
+onFlowStart:
+  - runScript: ../javascripts/get-search-datetimes.js
+---
+- scrollUntilVisible:
+    element: ${output.startMonthYear}
+    direction: "DOWN"
+    centerElement: true
+- tapOn: ${output.startDayOfMonth}
+- scrollUntilVisible:
+    element: ${output.endMonthYear}
+    direction: "DOWN"
+    centerElement: true
+- tapOn: ${output.endDayOfMonth}
+- tapOn: "Confirm dates"
+# TODO: Locators for time sliders so we can pick times
+- tapOn: "Confirm time"
