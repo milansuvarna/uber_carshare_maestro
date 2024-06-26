@@ -1,0 +1,16 @@
+appId: au.com.carnextdoor.staging.app
+---
+- runScript: # This is required when running the subflow in isolation
+    label: Determine car search dates
+    when:
+      true: ${typeof output.startDayMonth == 'undefined'}
+    file: ../javascripts/get-search-datetimes.js
+- assertVisible: Your trip is confirmed
+- assertVisible: Pickup
+- assertVisible: 6:00AM.+${output.startDayMonth}.+
+- assertVisible: Return
+- assertVisible: 7:00AM.+${output.endDayMonth}.+
+- assertVisible: What's next?
+- assertVisible: 15 minutes before your trip, open the app, tap Pick up to find and unlock the car.
+- assertVisible: To find and unlock the car
+- assertVisible: View trip

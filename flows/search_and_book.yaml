@@ -22,3 +22,4 @@ onFlowComplete:
 - runFlow: "subflows/explore-listings-list.yaml"
 - runFlow: "subflows/explore-listings-map.yaml"
 - runFlow: "subflows/checkout.yaml"
+- runFlow: "subflows/trip-confirmation.yaml"
