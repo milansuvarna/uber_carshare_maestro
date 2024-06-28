@@ -5,4 +5,4 @@ appId: au.com.carnextdoor.staging.app
 - tapOn: Verify and login
 # Redirects to Trips screen, so we need to click back to Search screen for remaining tests
 - tapOn:
-    point: 50%,93% # TODO: Replace with search menu item.
+    point: 17%,93% # TODO: Locator for search menu item.
