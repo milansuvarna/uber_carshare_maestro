@@ -1,0 +1,14 @@
+# This tests a small subset of visible elements on the car profile screen, only those required for borrower booking.
+# TODO: More comprehensive car profile screen test to cover all visible elements.
+appId: au.com.carnextdoor.staging.app
+---
+- runScript: # This is required when running the subflow in isolation
+    label: Determine car search dates
+    when:
+      true: ${typeof output.startDayMonth == 'undefined'}
+    file: ../javascripts/get-search-datetimes.js
+- scrollUntilVisible:
+    element: .+${output.startDayMonth}, 06:00AM
+    direction: DOWN
+- assertVisible: .+${output.endDayMonth}, 11:00PM
+- assertVisible: Go to checkout
