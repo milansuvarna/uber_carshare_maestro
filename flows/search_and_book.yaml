@@ -19,10 +19,7 @@ onFlowComplete:
 - clearState
 - launchApp: au.com.carnextdoor.staging.app
 - runFlow: subflows/login.yaml
-- tapOn: City, hotel or address
-- inputText: ${ADDRESS_SEARCH_TEXT}
-- pressKey: Enter
-- tapOn: "${ADDRESS_CONFIRM_TEXT}.*${ADDRESS_CONFIRM_TEXT}"
+- runFlow: "subflows/enter-address.yaml"
 - runFlow: "subflows/select-dates.yaml"
 - runFlow: "subflows/explore-listings-map.yaml"
 - runFlow: "subflows/explore-listings-list.yaml"
