@@ -8,8 +8,13 @@ env:
   # Provide env-configurability for test record setup
   TEST_SETUP_API_BASE_URL: ${TEST_SETUP_API_BASE_URL} # If not provided this gets set as a string: "null"
   TEST_SETUP_API_BASE_URL_DEFAULT: https://staging.ubercarshare.com
+  PASSWORD: 12345678 # All members created using the api/v2/test_setup endpoints have this password.
+onFlowStart:
+  - runScript: ./javascripts/test-setup-api.js
+  - runScript: ./javascripts/test-user-create.js
 onFlowComplete:
-- runScript: ./javascripts/test-user-delete.js
+  - runScript: ./javascripts/test-user-delete.js
+
 ---
 - clearState
 - launchApp: au.com.carnextdoor.staging.app

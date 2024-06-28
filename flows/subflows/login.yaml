@@ -2,11 +2,6 @@ appId: au.com.carnextdoor.staging.app
 name: Login
 tags:
   - sanity
-env:
-  PASSWORD: 12345678 # All members created using the api/v2/test_setup endpoints have this password.
-onFlowStart:
-- runScript: ../javascripts/test-setup-api.js
-- runScript: ../javascripts/test-user-create.js
 
 ---
 - assertVisible: "Log in to Uber Carshare"
@@ -15,8 +10,8 @@ onFlowStart:
 - tapOn: "Password"
 - inputText: ${PASSWORD}
 - tapOn: Log in
-# First time login of a user on a device will be shown the verification code screen
 - runFlow:
+    label: Two factor verification for first-time borrowers only
     when:
       visible: "Is it really you?"
     file: mobile_verification.yaml
