@@ -26,6 +26,13 @@ maestro test <path-to-test>
 # eg maestro test flows/search_and_book.yaml
 ```
 
+To run against an environment other than staging:
+
+```
+maestro test <path-to-flows> -e TEST_SETUP_API_BASE_URL=<non-prod-env-url>
+# eg. maestro test flows -e TEST_SETUP_API_BASE_URL=http://localhost:3000/
+```
+
 
 To spin up [Maestro Studio](https://maestro.mobile.dev/getting-started/maestro-studio) for point-and-click assistance with test development:
 
