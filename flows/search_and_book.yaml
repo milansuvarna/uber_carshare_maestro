@@ -3,19 +3,21 @@ name: Search and book
 tags:
   - sanity
 env:
-  ADDRESS_SEARCH_TEXT: "55 Pyrmont Bridge Rd"
-  ADDRESS_CONFIRM_TEXT: "55 Pyrmont Bridge Rd, Pyrmont NSW 2009, Australia"
+  ADDRESS_SEARCH_TEXT: 55 Pyrmont Bridge Rd
+  ADDRESS_CONFIRM_TEXT: 55 Pyrmont Bridge Rd, Pyrmont NSW 2009, Australia
+  # Provide env-configurability for test record setup
+  TEST_SETUP_API_BASE_URL: ${TEST_SETUP_API_BASE_URL} # If not provided this gets set as a string: "null"
+  TEST_SETUP_API_BASE_URL_DEFAULT: https://staging.ubercarshare.com
 onFlowComplete:
 - runScript: ./javascripts/test-user-delete.js
-
 ---
 - clearState
 - runFlow: subflows/login.yaml
-- tapOn: "City, hotel or address"
+- tapOn: City, hotel or address
 - inputText: ${ADDRESS_SEARCH_TEXT}
 - pressKey: Enter
 - tapOn: "${ADDRESS_CONFIRM_TEXT}.*${ADDRESS_CONFIRM_TEXT}"
 # Now select date and times...
-- tapOn: "Confirm dates"
-- tapOn: "Confirm time"
-- assertVisible: "How are prices calculated?"
+- tapOn: Confirm dates
+- tapOn: Confirm time
+- assertVisible: How are prices calculated?
