@@ -16,6 +16,7 @@ onFlowComplete:
   - runScript: ./javascripts/test-user-delete.js
 
 ---
+# Comment out the next 2 lines if running against a local running flutter app:
 - clearState
 - launchApp: au.com.carnextdoor.staging.app
 - runFlow: subflows/login.yaml
