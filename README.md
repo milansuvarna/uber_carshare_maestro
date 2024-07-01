@@ -23,7 +23,7 @@ To run a specific test:
 
 ```
 maestro test <path-to-test>
-# eg maestro test flows/search_and_book.yaml
+# eg maestro test flows/search-and-book.yaml
 ```
 
 To run against an environment other than staging:

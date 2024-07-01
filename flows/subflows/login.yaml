@@ -10,7 +10,7 @@ appId: au.com.carnextdoor.staging.app
     label: Two factor verification for first-time borrowers only
     when:
       visible: "Is it really you?"
-    file: mobile_verification.yaml
+    file: mobile-verification.yaml
 - assertNotVisible: "Log in to Uber Carshare"
 - runFlow:
     label: Allow location detection
