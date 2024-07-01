@@ -1,8 +1,4 @@
 appId: au.com.carnextdoor.staging.app
-name: Login
-tags:
-  - sanity
-
 ---
 - assertVisible: "Log in to Uber Carshare"
 - tapOn: "Email address"
