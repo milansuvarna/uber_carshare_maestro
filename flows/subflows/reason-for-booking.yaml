@@ -1,0 +1,7 @@
+appId: au.com.carnextdoor.staging.app
+---
+- tapOn: To move houses
+- tapOn: Next
+- tapOn: Enter your answer
+- inputText: test
+- tapOn: Submit

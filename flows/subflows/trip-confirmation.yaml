@@ -5,12 +5,17 @@ appId: au.com.carnextdoor.staging.app
     when:
       true: ${typeof output.startDayMonth == 'undefined'}
     file: ../javascripts/get-search-datetimes.js
+- runFlow:
+    label: Best reason for booking car
+    when:
+      visible: What would best describe your reason for booking this car?
+    file: reason-for-booking.yaml
 - assertVisible: Your trip is confirmed
 - assertVisible: Pickup
 - assertVisible: 6:00AM.+${output.startDayMonth}.+
 - assertVisible: Return
-- assertVisible: 7:00AM.+${output.endDayMonth}.+
+- assertVisible: 11:00PM.+${output.endDayMonth}.+
 - assertVisible: What's next?
-- assertVisible: 15 minutes before your trip, open the app, tap Pick up to find and unlock the car.
+- assertVisible: 15 minutes before your trip, open the app, tap Pick up to find and unlock the car.+
 - assertVisible: To find and unlock the car
 - assertVisible: View trip
