@@ -30,7 +30,7 @@ appId: au.com.carnextdoor.staging.app
         - scroll
 - tapOn:
     label: Tap on last visible listing
-    above: Map # TODO: Locator for listing item
+    point: 18%,75% # TODO: Locator for listing item
 - assertVisible:
     label: Assert this is the car profile screen
     text: Go to checkout
