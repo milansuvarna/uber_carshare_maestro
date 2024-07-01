@@ -16,3 +16,8 @@ tags:
       visible: "Is it really you?"
     file: mobile_verification.yaml
 - assertNotVisible: "Log in to Uber Carshare"
+- runFlow:
+    label: Allow location detection
+    when:
+      visible: Allow Uber Carshare Staging to access this device’s location?
+    file: "./allow-location-detection.yaml"
