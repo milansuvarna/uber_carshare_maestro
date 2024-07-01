@@ -5,10 +5,10 @@ function createTestUser() {
   ]
 
   const createUserResponse = output.create("members", "approved_member_with_applicant", traits);
-
-  const responseBody = json(createUserResponse.body)
-  console.log(`Test member created: ${responseBody.email}`);
-  return responseBody;
+  if (!createUserResponse.ok) {
+    throw new Error('Failed to create test user');
+  }
+  return json(createUserResponse.body);
 };
 
 output.testUser = createTestUser();
