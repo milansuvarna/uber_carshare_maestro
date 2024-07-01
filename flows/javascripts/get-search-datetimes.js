@@ -1,12 +1,9 @@
 const today = new Date();
 const locale = 'en-au';
-// const monthYearFormat = {month: 'long', year: 'numeric'};
-// const dayFormat = {day: 'numeric'};
-// const dayMonthFormat = {day: 'numeric', month: 'short'};
 const monthNamesLong = [ "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December" ];
 const monthNamesShort = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]; // check Sep!
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
 // Set start date to 24 hours from now
 const startDatetime = new Date(today.getTime() + 1000 * 60 * 60 * 24);
