@@ -1,19 +1,19 @@
 appId: au.com.carnextdoor.staging.app
 ---
-- assertVisible: "Log in to Uber Carshare"
-- tapOn: "Email address"
+- assertVisible: Log in to Uber Carshare
+- tapOn: Email address
 - inputText: ${output.testUser.email}
-- tapOn: "Password"
+- tapOn: Password
 - inputText: ${PASSWORD}
 - tapOn: Log in
 - runFlow:
     label: Two factor verification for first-time borrowers only
     when:
-      visible: "Is it really you?"
+      visible: Is it really you?
     file: mobile-verification.yaml
-- assertNotVisible: "Log in to Uber Carshare"
+- assertNotVisible: Log in to Uber Carshare
 - runFlow:
     label: Allow location detection
     when:
       visible: Allow Uber Carshare Staging to access this device’s location?
-    file: "./allow-location-detection.yaml"
+    file: ./allow-location-detection.yaml

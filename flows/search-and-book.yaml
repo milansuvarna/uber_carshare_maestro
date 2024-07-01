@@ -20,10 +20,10 @@ onFlowComplete:
 - clearState
 - launchApp: au.com.carnextdoor.staging.app
 - runFlow: subflows/login.yaml
-- runFlow: "subflows/enter-address.yaml"
-- runFlow: "subflows/select-dates.yaml"
-- runFlow: "subflows/explore-listings-map.yaml"
-- runFlow: "subflows/explore-listings-list.yaml"
-- runFlow: "subflows/car-profile-for-booking.yaml"
-- runFlow: "subflows/checkout.yaml"
-- runFlow: "subflows/trip-confirmation.yaml"
+- runFlow: subflows/enter-address.yaml
+- runFlow: subflows/select-dates.yaml
+- runFlow: subflows/explore-listings-map.yaml
+- runFlow: subflows/explore-listings-list.yaml
+- runFlow: subflows/car-profile-for-booking.yaml
+- runFlow: subflows/checkout.yaml
+- runFlow: subflows/trip-confirmation.yaml

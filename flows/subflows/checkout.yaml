@@ -11,7 +11,7 @@ appId: au.com.carnextdoor.staging.app
     label: Tap on Basic cover
 # TODO: Test for selecting premium cover
 - tapOn:
-    point: "50%,91%" # TODO: Locator for "confirm"
+    point: 50%,91% # TODO: Locator for "confirm"
     label: Tap on Confirm
 - assertVisible: Trip summary
 - assertVisible: .+${output.startDayMonth} 06:00AM to .+${output.endDayMonth} 11:00PM
@@ -38,7 +38,7 @@ appId: au.com.carnextdoor.staging.app
     direction: DOWN
 - assertVisible: You\'ll be charged distance costs.+
 - tapOn: applicable fees
-- assertVisible: "Inconvenience and administrative fees | Australia"
+- assertVisible: Inconvenience and administrative fees | Australia
 - tapOn:
     point: 7%,9% # TODO: Locator for back button
     label: Tap on Back
@@ -47,4 +47,4 @@ appId: au.com.carnextdoor.staging.app
 - assertVisible: Payment method
 - tapOn: Book now
 - assertVisible: Review the local Membership Agreement.+
-- tapOn: "I understand and agree"
+- tapOn: I understand and agree

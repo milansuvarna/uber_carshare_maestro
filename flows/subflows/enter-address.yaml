@@ -1,6 +1,6 @@
 appId: au.com.carnextdoor.staging.app
 ---
-- tapOn: "City, hotel or address"
+- tapOn: City, hotel or address
 - inputText: ${ADDRESS_SEARCH_TEXT}
 - pressKey: Enter
 - tapOn: "${ADDRESS_CONFIRM_TEXT}.*${ADDRESS_CONFIRM_TEXT}"

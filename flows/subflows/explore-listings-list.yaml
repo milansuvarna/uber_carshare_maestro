@@ -12,7 +12,7 @@ appId: au.com.carnextdoor.staging.app
     label: Assert this is the car profile screen
     text: Go to checkout
 - tapOn:
-    point: "5%,6%" # TODO: Locator for back arrow to get back to the list
+    point: 5%,6% # TODO: Locator for back arrow to get back to the list
     label: Tap on Back
 - scroll
 - scroll
