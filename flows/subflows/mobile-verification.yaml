@@ -4,6 +4,7 @@ appId: au.com.carnextdoor.staging.app
 - inputText: 123
 - tapOn: Verify and login
 # Redirects to Trips screen, so we need to click back to Search screen for remaining tests
+- waitForAnimationToEnd
 - tapOn:
     label: Tap on Search menu item
     point: 17%,93% # TODO: Locator for search menu item.
